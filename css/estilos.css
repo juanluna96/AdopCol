@@ -1,0 +1,20 @@
+:root {
+    /* --------------------------------- Colores -------------------------------- */
+    --color-principal: #2ECC71;
+    --color-secundario: #6DB4C7;
+    --color-terciario: #959FAF;
+    --color-claro: #f6f1f3;
+    --color-oscuro: #1B1C27;
+    /* --------------------------------- Fuentes -------------------------------- */
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-brand img {
+    max-width: 4em;
+}
+
+.row a i {
+    color: var(--color-terciario);
+    font-size: 30px;
+}
