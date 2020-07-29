@@ -1,13 +1,35 @@
 :root {
     /* --------------------------------- Colores -------------------------------- */
     --color-principal: #2ECC71;
-    --color-secundario: #6DB4C7;
+    --color-secundario: #85AF91;
     --color-terciario: #959FAF;
+    --color-cuaternario: #775E6C;
     --color-claro: #f6f1f3;
-    --color-oscuro: #1B1C27;
+    --color-oscuro: #3B4145;
     /* --------------------------------- Fuentes -------------------------------- */
     --fuente-principal: 'Montserrat', sans-serif;
     --fuente-secundaria: 'Source Sans Pro', sans-serif;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Header                                   */
+
+
+/* -------------------------------------------------------------------------- */
+
+body {
+    background-color: var(--color-claro);
+    font-size: 16px;
+    font-family: var(--fuente-principal);
+    color: var(--color-oscuro);
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
 }
 
 .navbar-brand img {
@@ -15,6 +37,150 @@
 }
 
 .row a i {
-    color: var(--color-terciario);
+    color: var(--color-secundario);
     font-size: 30px;
+}
+
+@media (max-width: 992px) {
+    .navbar-text {
+        margin: 0 auto;
+    }
+    .navbar-text .row {
+        margin: 0 auto;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                    Main                                    */
+
+
+/* -------------------------------------------------------------------------- */
+
+.portada .col {
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.portada .foto {
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+.foto.izq {
+    background-image: url('../img/portada1.jpg');
+    background-position: center;
+}
+
+.foto.der {
+    background-image: url('../img/portada4.jpg');
+    opacity: 0.8;
+}
+
+.overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: fade(var(--color-claro), 40%);
+    background-image: linear-gradient( rgba(10, 8, 8, 0.45), rgba(32, 19, 19, 0.45));
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay i {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 25px;
+}
+
+.texto {
+    width: 50%;
+    padding: 3.375rem;
+}
+
+.texto h2 {
+    font-size: 1.8125rem;
+    font-weight: 400;
+    line-height: 2.6875rem;
+    margin-bottom: 1.125rem;
+}
+
+.texto p {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+}
+
+.foto-full {
+    width: 100%;
+    min-height: 15.25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.foto-full.izq {
+    background-image: url('../img/portada-2.jpg');
+}
+
+.foto-full.der {
+    background-image: url('../img/portada-3.jpeg');
+    background-position: top;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                  Nosotros                                  */
+
+
+/* -------------------------------------------------------------------------- */
+
+.nosotros {
+    padding: 5.625rem 0;
+}
+
+.nosotros .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nosotros .container .col-sm-4.izq {
+    border-right: 1px solid var(--color-secundario);
+    display: flex;
+    align-items: center;
+}
+
+.container .col-sm-8.der p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.125rem;
+    font-weight: 400;
+    line-height: 3.687rem;
+    margin-bottom: 1.125rem;
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.titulo-seccion p {
+    font-size: 1.15rem;
+    color: #777;
 }
