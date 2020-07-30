@@ -11,6 +11,10 @@
     --fuente-secundaria: 'Source Sans Pro', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 
 /* -------------------------------------------------------------------------- */
 
@@ -25,6 +29,7 @@ body {
     font-size: 16px;
     font-family: var(--fuente-principal);
     color: var(--color-oscuro);
+    overflow-x: hidden;
 }
 
 img {
@@ -65,6 +70,13 @@ img {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .portada .col.der {
+        display: none;
+    }
 }
 
 .portada .foto {
@@ -110,7 +122,7 @@ img {
 
 .texto {
     width: 50%;
-    padding: 3.375rem;
+    padding: 2.375rem;
 }
 
 .texto h2 {
@@ -182,5 +194,152 @@ img {
 
 .titulo-seccion p {
     font-size: 1.15rem;
+    color: #777;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Equipo                                   */
+
+
+/* -------------------------------------------------------------------------- */
+
+.equipo {
+    background: var(--color-secundario);
+    padding: 2.625rem 0;
+}
+
+.equipo .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.slider {
+    box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
+}
+
+.slider .titulo-seccion {
+    padding: 3.125rem;
+    padding-right: 0;
+}
+
+.col-sm-6 .titulo-seccion h2 {
+    color: white;
+}
+
+.titulo-seccion p {
+    color: fade(var(--color-claro, 70%));
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.slider {
+    width: 300%;
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 Menu Perros                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+.nuestros-amigos {
+    padding: 4.625rem 0;
+}
+
+.nuestros-amigos .container .titulo-seccion h2 {
+    text-align: center;
+}
+
+.contenedor-perros {
+    margin-top: 2.5rem;
+}
+
+.contenedor-perros .encabezado {
+    font-weight: 600;
+    font-family: var(--fuente-secundaria);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.encabezado li a {
+    color: var(--color-secundario);
+    font-size: 0.95rem;
+    padding: 0 1.4375rem 1.125rem 1.4375rem;
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.encabezado li a:hover {
+    color: var(--color-cuaternario);
+    text-decoration: none;
+}
+
+.encabezado li a.active {
+    color: var(--color-cuaternario);
+    border-bottom: 2px solid var(--color-cuaternario);
+}
+
+.contenido {
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    border: 6px double var(--color-terciario);
+    padding: 0 2.25rem;
+}
+
+.contenido>div {
+    display: none;
+    transition: all .3s ease;
+}
+
+.contenido>div.active {
+    display: block;
+    padding: 15px;
+}
+
+.item {
+    padding: 2.25rem 0;
+    border-bottom: 0.2px solid var(--color-terciario);
+}
+
+.item:last-child {
+    border-bottom: 0.2px solid transparent;
+}
+
+.item .izq h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.625;
+}
+
+.item .izq p {
+    font-size: 1rem;
     color: #777;
 }
