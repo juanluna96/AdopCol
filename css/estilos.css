@@ -2,7 +2,7 @@
     /* --------------------------------- Colores -------------------------------- */
     --color-principal: #2ECC71;
     --color-secundario: #85AF91;
-    --color-terciario: #959FAF;
+    --color-terciario: #979797;
     --color-cuaternario: #775E6C;
     --color-claro: #f6f1f3;
     --color-oscuro: #3B4145;
@@ -95,7 +95,7 @@ img {
     opacity: 0.8;
 }
 
-.overlay {
+.lightbox .overlay {
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -172,10 +172,16 @@ img {
     flex-wrap: wrap;
 }
 
-.nosotros .container .col-sm-4.izq {
-    border-right: 1px solid var(--color-secundario);
+.nosotros .container .col-md-4.izq {
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nosotros .container .col-md-4.izq {
+        border-right: 1px solid var(--color-secundario);
+        display: flex;
+    }
 }
 
 .container .col-sm-8.der p {
@@ -227,7 +233,7 @@ img {
     padding-right: 0;
 }
 
-.col-sm-6 .titulo-seccion h2 {
+.col-md-6 .titulo-seccion h2 {
     color: white;
 }
 
@@ -342,4 +348,163 @@ img {
 .item .izq p {
     font-size: 1rem;
     color: #777;
+}
+
+.col-sm-4 img {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                  Contacto                                  */
+
+
+/* -------------------------------------------------------------------------- */
+
+.contacto .datos {
+    padding: 5.625rem 0 11.875rem 0;
+    position: relative;
+    background-image: linear-gradient( rgb(133, 175, 145, 0.4), rgb(133, 175, 145, 0.4)), url('/img/contacto-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.datos .overlay {
+    width: 100%;
+    height: 100%;
+    background: fade(var(--color-oscuro), 30%);
+    top: 0;
+    z-index: 1;
+}
+
+.overlay .container {
+    position: relative;
+    z-index: 2;
+}
+
+.blurb {
+    background: var(--color-claro);
+    border: 5px double var(--color-terciario);
+    padding: 2.25rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.blurb h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6875rem;
+    border-bottom: 1px solid var(--color-terciario);
+}
+
+.blurb p {
+    font-size: 1em;
+    color: #777;
+}
+
+.formulario {
+    position: relative;
+    z-index: 3;
+    background: var(--color-claro);
+    margin: 0 auto;
+    padding: 2.25rem;
+    margin-top: -6.25rem;
+    width: 90%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input {
+    font-family: var(--fuente-secundaria);
+    font-size: 1rem;
+    color: var(--color-oscuro);
+    width: 100%;
+    outline: none;
+    padding: 0.9375rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(46, 204, 113, 0.5);
+    vertical-align: top;
+    transition: all .3s ease;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 10.25rem;
+    min-height: 5.125rem;
+    min-width: 100%;
+}
+
+label {
+    color: var(--color-terciario);
+    font-family: var(--fuente-secundaria);
+}
+
+label.label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    font-style: 1rem;
+    line-height: 1rem;
+    margin-left: 0.2rem;
+    transition: all .3s ease;
+    font-size: 1.2rem;
+}
+
+.label.active {
+    top: -12px;
+    margin-left: 0;
+    font-style: 0.75rem;
+    line-height: 0.75rem;
+    color: var(--color-cuaternario);
+}
+
+.error {
+    position: absolute;
+    color: var(--color-oscuro);
+    font-family: var(--fuente-secundaria);
+    font-size: 0.875rem;
+}
+
+.btn {
+    font-family: var(--fuente-secundaria);
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                Pie de pagina                               */
+
+
+/* -------------------------------------------------------------------------- */
+
+footer {
+    margin-top: 2.25rem;
+    background-color: var(--color-oscuro);
+    padding: 5.625rem 0;
+    text-align: center;
+    color: var(--color-claro);
+}
+
+.botton-redes a {
+    padding: 0 0.5625rem;
+}
+
+.botton-redes a i {
+    color: var(--color-claro);
+    transition: all .3s ease;
+}
+
+.botton-redes a i:hover {
+    color: var(--color-terciario);
 }
