@@ -345,13 +345,13 @@ img {
     max-width: 50rem;
     margin: 0 auto;
     margin-top: 2.5rem;
-    border: 6px double var(--color-terciario);
     padding: 0 2.25rem;
 }
 
 .contenido>div {
     display: none;
-    transition: all .3s ease;
+    transition: all .7s ease;
+    border: 6px double var(--color-terciario);
 }
 
 .contenido>div.active {
