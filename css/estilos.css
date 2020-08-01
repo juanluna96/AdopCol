@@ -498,7 +498,7 @@ label.label {
 
 .error {
     position: absolute;
-    color: var(--color-oscuro);
+    color: var(--color-cuaternario);
     font-family: var(--fuente-secundaria);
     font-size: 0.875rem;
 }
