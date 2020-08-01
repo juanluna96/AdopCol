@@ -493,6 +493,7 @@ label.label {
     font-style: 0.75rem;
     line-height: 0.75rem;
     color: var(--color-cuaternario);
+    font-size: 1.1rem;
 }
 
 .error {
